@@ -1,0 +1,13 @@
+body {
+  font-family: 'Mukta', sans-serif;
+  background-color: rgb(172, 231, 204);
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-box {
+  background-color: rgb(255, 255, 255);
+  margin: 100px auto;
+  max-width: 230px;
+  box-shadow: 10px 10px 10px rgba(95, 95, 95, 0.301);
+  border-radius: 5px;
+}

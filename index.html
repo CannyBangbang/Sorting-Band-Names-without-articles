@@ -5,11 +5,32 @@
   <meta charset="UTF-8">
   <title>Sorting Band Names without articles</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
 </head>
 
 <body>
+  <div class="main-box">
+    <ul id="bands"></ul>
+  </div>
 
   <script>
+    const bands = ['The Black Keys', 'The Strokes', 'Gwar', 'Bright Eyes', 'A Tribe Called Quest', 'An Fake Band', 'The Faint', 'ZZ Top', 'Nujabes', 'Panda Bear'];
+
+    function remover(band) {
+      return band.replace(/^(a\s|the\s|an\s)/i, '').trim();
+    }
+
+    const sortedBands = bands.sort((a, b) => {
+      if (remover(a) > remover(b)) {
+        return 1;
+      }
+      else {
+        return -1;
+      }
+    })
+
+    document.querySelector('#bands').innerHTML = sortedBands.map(band => `<li class="band">${band}</li>`).join('');
+
 
   </script>
 </body>
